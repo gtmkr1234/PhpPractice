@@ -7,7 +7,7 @@ if(isset($_SESSION['user'])){
     echo "You are scrolling home page";
     echo "<br>";
     echo "<a href='product.php'> Click here to navigate to the product page ";
-    echo "<a href='logout.php'><input type ='submit' name='logout'></a> ";
+    echo "<a href='logout.php'><input type ='submit' name='logout' value='logout'></a> ";
 }
 else{
     if($username == $_POST['uname'] and $passw == $_POST['password']){
