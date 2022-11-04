@@ -19,4 +19,7 @@ echo $obj_test->num;
 $obj_test->__destruct();
 $obj_test->count = 20;
 $obj_test->__destruct();
-
+/*
+ * //Output of the following code is :-
+ * WelcomeClass30705050
+ */
