@@ -3,8 +3,12 @@ class test{
     public int $sum = 45;
     private int $count = 54;
     public function hello(){
-        echo "Welcome"."<br>";
+        echo "hello"."<br>";
         echo $this->sum;
+    }
+    public function welcome(){
+        echo "Welcome"."<br>";
+        $this->sum = 98;
     }
 }
 $obj_test = new test();
@@ -23,4 +27,11 @@ echo $obj_test->hello();
  * Output of this snippet:-
  * Welcome
  * 45
+ */
+echo $test_2->welcome();
+echo $test_2->sum;
+/*
+ * Output of the snippet is :-
+ * Welcome
+ * 98
  */
