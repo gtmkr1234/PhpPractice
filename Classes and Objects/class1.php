@@ -10,6 +10,12 @@ class test{
         echo "Welcome"."<br>";
         $this->sum = 98;
     }
+    public function hai(){
+        echo "Value of private property count is : ".$this->count;
+    }
+    public function setprivate($num){
+        $this->count = $num;
+    }
 }
 $obj_test = new test();
 $test_2 = new test;
@@ -34,4 +40,14 @@ echo $test_2->sum;
  * Output of the snippet is :-
  * Welcome
  * 98
+ */
+echo "<br>";
+$obj_test->hai();
+echo "<br>";
+$obj_test->setprivate(144);
+$obj_test->hai();
+/*
+ * Output of the snippet is
+ * Value of private property count is : 54
+ * Value of private property count is : 144
  */
