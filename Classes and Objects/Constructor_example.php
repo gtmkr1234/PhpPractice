@@ -21,11 +21,11 @@ echo "<br>";
 $obj_test2->hello();
 echo "<br>";
 /*
- * As the value of $count changed, the assigned value will be 'fail'
+ * //As the value of $count changed, the assigned value will be 'fail'
  * hello
  * fail
  * hello
  * fail
- * As there are two objects, the destructor of the two objects called twice.
+ * //As there are two objects, the destructor of the two objects called twice.
  * End of the File!!!End of the File!!!
  */
