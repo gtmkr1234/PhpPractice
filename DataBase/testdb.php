@@ -5,13 +5,14 @@ if(mysqli_connect_errno()){
     echo " NO";
 }
 else{
-    echo "Success"."<br>";
+    $name = $_POST['name'];
+    $number = $_POST['number'];
+    $marks = $_POST['marks'];
     $query = "INSERT INTO gautam(Name, Phone, Marks)
-              VALUES ('Adarsh Shakya', 8974561125, 98) ";
+              VALUES ('".$name."',".$number.",".$marks.")";
     $res = mysqli_query($mysqli, $query);
     if($res){
-        echo "Data Inserted";
-
+        echo "<script>location.href='form.html'</script>";
     }
     else{
         echo "Some Error Occured";
