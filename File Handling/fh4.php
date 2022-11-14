@@ -1,4 +1,4 @@
 <?php
 $res = fopen("section.txt","r");
 $sss = fread($res,filesize("section.txt"));
-echo $sss;
+echo str_replace("\n","<br>",$sss);
