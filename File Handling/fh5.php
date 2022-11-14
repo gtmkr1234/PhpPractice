@@ -16,3 +16,4 @@ if(file_exists("Resume.txt")){
 else{
     echo "<br> File doesn't exist";
 }
+//$_SERVER and $_REQUEST are useful when the form and the php code are on the same page.
