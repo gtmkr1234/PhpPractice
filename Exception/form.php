@@ -15,7 +15,24 @@
 </form>
 <?php
 if($_SERVER['REQUEST_METHOD']=="POST"){
-echo "tested";
+$num = $_POST["numerator"];
+$den = $_POST["denominator"];
+class DivisionByZero extends Exception {
+
+}
+class DivisionByNegative extends Exception{
+    
+}
+class NumberIsGreater extends Exception{
+
+}
+
+    try {
+        echo $num/$den;
+    }
+    catch (DivisionByZeroError){
+        echo "division by zero! please use more tah zero in denominator";
+    }
 }
 ?>
 </body>
