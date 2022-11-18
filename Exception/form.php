@@ -9,8 +9,8 @@
 </head>
 <body>
 <form action="form.php" method="get">
-    <input type="number" name="ip1" autofocus>
-    <input type="number" name="ip2">
+    <input type="number" name="numerator" autofocus>
+    <input type="number" name="denominator">
     <input type="button" value="result" name="calculate">
 </form>
 <?php
