@@ -17,7 +17,8 @@ session_start();
                 <td>
                     <input type="submit" value="start" name="name">
                     <?php
-                    $_SESSION['val'] = rand(10000000, 99999999);
+                    if($_SERVER['REQUEST_METHOD']=="GET"){
+                    $_SESSION['val'] = rand(10000000, 99999999);}
                     ?>
                 </td>
                 <td>
@@ -27,6 +28,7 @@ session_start();
         </form>
     </table>
                     <?php
+                    if($_SERVER['REQUEST_METHOD']=="GET"){
                     if(!isset($_SESSION['a'])){
                         if(isset($_GET)) {
                             if ($_GET['name'] == 'start') {
@@ -58,7 +60,7 @@ session_start();
                                 header("refresh: 2;");
                             }
                         }
-                    }
+                    }}
                     ?>
 </div>
 </body>

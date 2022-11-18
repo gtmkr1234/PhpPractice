@@ -8,13 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-<form action="form.php" method="get">
+<form action="form.php" method="post">
     <input type="number" name="numerator" autofocus>
     <input type="number" name="denominator">
-    <input type="button" value="result" name="calculate">
+    <input type="submit" value="result" name="calculate">
 </form>
 <?php
-
+if($_SERVER['REQUEST_METHOD']=="POST"){
+echo "tested";
+}
 ?>
 </body>
 </html>
