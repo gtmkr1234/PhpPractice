@@ -12,7 +12,7 @@ else{
               VALUES ('".$name."',".$number.",".$marks.")";
     $res = mysqli_query($mysqli, $query);
     if($res){
-        echo "<script>location.href='form.html'</script>";
+        echo "<script>location.href='form.php'</script>";
     }
     else{
         echo "Some Error Occured";

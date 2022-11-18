@@ -12,7 +12,7 @@ session_start();
 </head>
 <body>
 <div style="text-align: center;"><table>
-        <form method="get">
+        <form action="testlab.php" method="get">
             <tr>
                 <td>
                     <input type="submit" value="start" name="name">
