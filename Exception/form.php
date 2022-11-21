@@ -18,17 +18,20 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 $num = $_POST["numerator"];
 $den = $_POST["denominator"];
 class NumberIsZero extends Exception {
-    function errorMessage(){
+    function errorMessage(): string
+    {
         return $this->getMessage();
     }
 }
 class DivisionByNegative extends Exception{
-    function errorMessage(){
+    function errorMessage(): string
+    {
         return $this->getMessage();
     }
 }
 class NumberIsGreater extends Exception{
-    function errorMessage(){
+    function errorMessage(): string
+    {
         return $this->getMessage();
     }
 }
@@ -41,12 +44,12 @@ class NumberIsGreater extends Exception{
             throw new NumberIsGreater("Please provide a valid value. Denominator is greater than the numerator");
         }
         if($den<0){
-            throw new DivisionByNegative("please provide a valid denominator value");
+            throw new DivisionByNegative("please provide a valid denominator value. Denominator is negative");
         }
         echo $num/$den;
     }
     catch (Exception $e){
-        echo $e->getMessage();
+        echo $e->errorMessage();
     }
 }
 ?>
