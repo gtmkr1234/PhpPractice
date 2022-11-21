@@ -17,17 +17,32 @@
 if($_SERVER['REQUEST_METHOD']=='POST'){
 $num = $_POST["numerator"];
 $den = $_POST["denominator"];
-class DivisionByZero extends Exception {
-
+class NumberIsZero extends Exception {
+    function errorMessage(){
+        return $this->getMessage();
+    }
 }
 class DivisionByNegative extends Exception{
-    
+    function errorMessage(){
+        return $this->getMessage();
+    }
 }
 class NumberIsGreater extends Exception{
-
+    function errorMessage(){
+        return $this->getMessage();
+    }
 }
 
     try {
+        if($den==0){
+            throw new NumberIsZero("please provide a valid value rather than 0 in denominator");
+        }
+        if($den>$num){
+            throw new NumberIsGreater("Please provide a valid value. Denominator is greater than the numerator");
+        }
+        if($den<0){
+            throw new DivisionByNegative("please provide a valid denominator value");
+        }
         echo $num/$den;
     }
     catch (DivisionByZeroError){
