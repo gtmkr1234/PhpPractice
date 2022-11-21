@@ -45,8 +45,8 @@ class NumberIsGreater extends Exception{
         }
         echo $num/$den;
     }
-    catch (DivisionByZeroError){
-        echo "division by zero! please use more tah zero in denominator";
+    catch (Exception $e){
+        echo $e->getMessage();
     }
 }
 ?>
