@@ -14,7 +14,7 @@
     <input type="submit" value="result" name="calculate">
 </form>
 <?php
-if($_SERVER['REQUEST_METHOD']=="POST"){
+if($_SERVER['REQUEST_METHOD']=='POST'){
 $num = $_POST["numerator"];
 $den = $_POST["denominator"];
 class DivisionByZero extends Exception {
