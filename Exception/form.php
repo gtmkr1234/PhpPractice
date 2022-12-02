@@ -51,6 +51,9 @@ class NumberIsGreater extends Exception{
     catch (Exception $e){
         echo $e->errorMessage();
     }
+    finally{
+        echo "<br>Thank you";
+    }
 }
 ?>
 </body>
