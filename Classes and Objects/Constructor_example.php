@@ -2,7 +2,7 @@
 class test{
     public $sum = 45;
     private $count = 54;
-    public function hello()
+    public function hello(): void
     {
         echo "hello" . "<br>";
         echo $this->count;
